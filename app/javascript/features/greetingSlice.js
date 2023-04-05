@@ -1,10 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const greetingSlice = createSlice({
-  name: "message",
-  initialState: {
-    message: "",
-  },
+  name: "greeting",
+  initialState: '',
   reducers: {
     setGreeting: (state, action) => {
       state.greeting = action.payload;

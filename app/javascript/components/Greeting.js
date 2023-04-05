@@ -1,23 +1,18 @@
-// components/Greeting.js
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import getData from "../redux/getData";
+import React from "react";
+import { useSelector } from "react-redux";
 
-function Greeting() {
-  const dispatch = useDispatch();
+const Greeting = () => {
+  const messageData = useSelector((state) => state.message.message);
 
-  useEffect(() => {
-    dispatch(getData());
-  }, [dispatch]);
+  if (messageData.isLoading) {
+    return <p>Loading...</p>;
+  }
 
-  const message = useSelector((state) => state.text);
-  console.log(message);
+  if (!messageData.message) {
+    return <p>No message available</p>;
+  }
 
-  return (
-    <div>
-      <h1>{message.data.greeting}</h1>
-    </div>
-  );
-}
+  return <h1>{messageData.message}</h1>;
+};
 
 export default Greeting;

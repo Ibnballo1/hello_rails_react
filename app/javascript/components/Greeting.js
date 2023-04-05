@@ -1,38 +1,23 @@
+// components/Greeting.js
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchGreetings } from "./greetingSlice";
+import getData from "../redux/getData";
 
-const Greeting = () => {
-  //  Get greetings from Redux store:
-  const greeting = useSelector((state) => state.greetingReducer);
-  const greetingsStatus = useSelector((state) => state.greetingReducer.status);
-
-  console.log("data", greeting);
-  console.log("status", greetingsStatus);
-
-  // Prepare Redux dispatch method:
+function Greeting() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (greetingsStatus === "idle") {
-      dispatch(fetchGreetings());
-    }
-  }, [greetingsStatus, dispatch]);
+    dispatch(getData());
+  }, [dispatch]);
 
-  let content;
+  const message = useSelector((state) => state.text);
+  console.log(message);
 
-  if (greetingsStatus === "succeeded") {
-    content = <p>{greeting.greetings.content}</p>;
-  } else if (greetingsStatus === "failed") {
-    content = (
-      <>
-        <h1>message not found</h1>
-        <p>{error}</p>
-      </>
-    );
-  }
-
-  return <div>{content}</div>;
-};
+  return (
+    <div>
+      <h1>{message.data.greeting}</h1>
+    </div>
+  );
+}
 
 export default Greeting;

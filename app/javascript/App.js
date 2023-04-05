@@ -11,7 +11,6 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      <h1>App</h1>
       <Routes>
         <Route path="/" element={<Greeting />} />
       </Routes>

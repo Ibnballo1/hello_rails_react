@@ -43,13 +43,16 @@
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
+    <li><a href="https://ruby-lang.org/">Ruby</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://ph4admin.com/">Ph4Admin</a></li>
+    <li><a href="https://www.pgadmin.org/">Ph4Admin</a></li>
   </ul>
 </details>
 
@@ -96,6 +99,8 @@ Clone the repository
 
 ```
   git clone git@github.com:Ibnballo1/hello_rails_react.git
+  yarn install
+  bundle install
 ```
 Navigate to the folder
 cd hello_rails_react
@@ -112,8 +117,6 @@ You can deploy this project using:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/Ibnballo1)
@@ -125,8 +128,6 @@ You can deploy this project using:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - setup with the frontend 
 
@@ -162,8 +163,6 @@ I would like to thank everyone who help me in this task
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](https://github.com/Ibnballo1/hello_rails_react/blob/d93e16c5cf9601d6716836c87109170795bc4e6a/MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
